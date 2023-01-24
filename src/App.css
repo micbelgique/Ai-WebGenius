@@ -2,37 +2,100 @@
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.title {
+  font-size: 3em;
+  margin-bottom: 1em;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.card {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  width: 20%;
+  margin: 1em;
+  cursor: pointer;
+}
+
+.card img {
+  width: 100%;
+}
+
+body {
+  background: linear-gradient(to right, #15232a, #11102c);
+  background-size: 200% 200%;
+  animation: backgroundAnimation 8s ease-in-out infinite;
+  color: aliceblue;
+  font-family: 'Bebas Neue', cursive;
+}
+
+
+
+@keyframes backgroundAnimation {
+  0% {
+    background-position: 0% 0%;
+  }
+  50% {
+    background-position: 100% 0%;
+  }
+  100% {
+    background-position: 0% 0%;
+  }
+}
+
+.list {
+  list-style: none;
+  position: fixed;
+  bottom: 60px;
+  text-align: left;
+  right: 20px;
+  background-color: #343541;
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 0px 0px 10px #ccc;
+  display: flex; /* change the display to flex */
+  flex-wrap: wrap; /* wrap the images in case they are more */
+}
+
+.list li {
+    flex-basis: 30%; /* set the width of each image */
+    margin: 10px; /* add margin to each image */
+}
+
+
+.showList .list {
+  display: block;
+}
+
+
+.list-button {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #7a1da1; /* Add background color */
+  color: white; /* Add text color */
+  padding: 10px 20px; /* Add padding */
+  border-radius: 5px; /* Add rounded corners */
+  font-size: 16px; /* Change font size */
+  cursor: pointer; /* Change cursor to pointer */
+}
+
+.arrow-icon {
+  margin-left: 5px;
+  font-size: 20px;
   color: white;
 }
+.arrow-icon.down {
+  transform: rotate(180deg);
 
-.App-link {
-  color: #61dafb;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+
+.list-button.white {
+  background-color: #444654;
 }
