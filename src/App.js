@@ -6,7 +6,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faArrowUp } from '@fortawesome/free-solid-svg-icons'
 import { faArrowDown } from '@fortawesome/free-solid-svg-icons'
 
-
+import image from './sponsors/banners.png';
 
 
 import tool from './images/tool.png';
@@ -14,12 +14,15 @@ import city from './images/city.png';
 import thegoodplace from './images/thegoodplace.png';
 import deepeye from './images/deepeye.png';
 import hopedroid from './images/hopedroid.png';
+import coding from './images/coding.png';
+
 import screen1 from './prompts/screen1.png';
 import screen2 from './prompts/screen2.png';
 import screen3 from './prompts/screen3.png';
 import screen4 from './prompts/screen4.png';
 import screen5 from './prompts/screen5.png';
 import screen6 from './prompts/screen6.png';
+
 
 class App extends Component {
   handleClick = (website) => {
@@ -53,7 +56,7 @@ class App extends Component {
       },
       {
         image: thegoodplace,
-        title: "The good place",
+        title: "The Good Place",
         website: "https://proud-sea-0d4262203.1.azurestaticapps.net/"
       },
       {
@@ -65,12 +68,18 @@ class App extends Component {
         image: hopedroid,
         title: "Hopedroid",
         website: "https://spaceoffice.vsantele.dev/front/"
+      },
+      {
+        image: coding,
+        title: "Gallery Project",
+        website: "https://mango-river-06d670b1e.2.azurestaticapps.net/"
       }
+      
     ];
 
     return (
       <div className={`App ${this.state.showList ? 'showList' : ''}`}>
-        
+      
         <h1 className="title">Ai-WebGenius</h1>
         <div className="card-container">
           {cards.map((card, index) => (
@@ -94,6 +103,7 @@ class App extends Component {
           </ul>
 
         )}
+          <img  width="50%" src={image} alt="Description of the image" className="bottom-image" />
       </div>
     );
   }
